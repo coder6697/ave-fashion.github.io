@@ -1,0 +1,1310 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    text-align: center;
+}
+:root{
+  --1-color:#333333;
+  --2-color:#777777;
+  --3-color:#999999;
+  --4-color:#00c8c8;
+  --5-color:#ffffff;
+  --6-color:#f1f1f1;
+  --7-color:#454647;
+  --8-color:#575153;
+  --9-color:#727272;
+  --10-color:#f8f8f8;
+  --11-color:#8e8c8c;
+  --12-color:#000000;
+  --13-color:rgba(0,0,0,0);
+  --14-color:#222222;
+  scroll-behavior: smooth;
+}
+@font-face {
+    font-family:Montserrat-Regular;
+    src: url(../../font/static/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family:Montserrat-Bold;
+    src: url(../../font/static/Montserrat-Bold.ttf);
+}
+@font-face {
+    font-family:Montserrat-Light;
+    src: url(../../font/static/Montserrat-Light.ttf);
+}
+/*header*/
+  header .container{
+    display: grid;
+    grid-template-columns: auto auto;
+    font-family: Montserrat-Regular;
+    background-color: var(--1-color);
+}
+.container .left{
+    text-align: left;
+    font-size: 10px;
+    color: var(--2-color);
+    font-family: Montserrat-Regular;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+.container .left label{
+    cursor: pointer;
+}
+.container .left select{
+    border: none;
+    color: var(--2-color);
+    background-color: var(--13-color);
+    font-size: 10px;
+}
+.container .right{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+}
+.container .right a{
+    text-decoration: none;
+    color:var(--3-color);
+    font-size: 10px;
+    transition: 0.5s;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.active{
+  background-color: var(--4-color);
+  color: var(--5-color);
+}
+.container .right a:hover{
+  background-color: var(--4-color);
+  color: var(--5-color);
+}
+
+.container .right a.active{
+  background-color: var(--4-color);
+  color: var(--5-color);
+}
+
+
+
+/*main-tab*/
+.main-tab{
+    background-image: url("../../image/home/AVE-HOME.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding-bottom: 160px;
+}
+.main-tab .button button{
+  display: none;
+}
+.main-tab .logo{
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+.main-tab .logo img{
+  width: 137px;
+}
+/*desktop-menu*/
+.main-tab .desktop-menu{
+    display: none;
+}
+/*mobile-menu*/
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--12-color);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 15px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--2-color);
+    display: block;
+    transition: 0.5s;
+    font-family: Montserrat-Regular;
+  }
+  .sidenav a:nth-child(2){
+    margin-top: 100px;
+  }
+  .sidenav a:nth-child(1){
+    font-size: 80px;
+  }
+ .sidenav a:nth-child(1):hover{
+    color: var(--6-color);
+ }
+  .sidenav a:hover:not(:nth-child(1)) {
+    color: var(--6-color);
+    background-color: var(--4-color);
+  }
+ 
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  .mobile-menu span{
+    font-size: 35px;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 10px;
+    position: fixed;
+    transition: transform 0.5s;
+    z-index: 3;
+  }
+  .mobile-menu{
+    text-align: left;
+  }
+  /*kết thúc menu mobile*/
+  .main-tab .button{
+    text-align: right;
+    margin-right: 30px;
+    transform: translateY(140px);
+  }
+  .main-tab .button button{
+    padding: 10px;
+    font-size: 8px;
+    color:var(--7-color);
+    border: 1px solid var(--7-color);
+    background-color: var(--13-color);
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .main-tab .button button:hover{
+    background-color: var(--8-color);
+    color: var(--5-color);
+  }
+
+
+
+
+
+ /*product-tab*/
+.product-tab{
+    margin-top: 20px;
+    text-align: center;
+    font-family: Montserrat-Regular;
+  }
+  .product-tab .product-menu{
+    margin-bottom: 20px;
+  }
+  .product-tab .product-menu button{
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--9-color);
+    display: block;
+    margin: auto;
+    background-color:var(--13-color);
+    transition: 0.5s;
+    border: none;
+    cursor: pointer;
+  }
+  .product-tab .product-menu button.active1,
+  .product-tab .product-menu button:hover{
+    color: var(--4-color);
+  }
+  .products .product{
+    margin: auto;
+    width: 300px;
+    margin-bottom: 40px;
+    transition: box-shadow 0.5s;
+  }
+  .products .product .on-image>img{
+    width: 300px;
+  }
+  .products .product:nth-child(4) img,
+  .products .product:nth-child(3) img{
+    width: 300px;
+  }
+  .products .product img{
+    cursor: zoom-in;
+  }
+  .products .product .product-hover{
+    background-color: var(--5-color);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: none;
+  }
+  .products .product .product-hover h2{
+    color: var(--9-color);
+    font-size: 13px;
+  }
+  .products .product .product-hover p{
+    color: var(--11-color);
+    font-size: 15px;
+    max-width: 307px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .products .product .product-hover .icons{
+    margin-bottom: 10px;
+  }
+  .products .product .product-hover .icons a{
+    font-size: 18px;
+    background-color: var(--9-color);
+    color: var(--5-color);
+    padding: 7px;
+    border-radius: 50%;
+    margin-right: 5px;
+    margin-left: 5px;
+    transition: 0.5s;
+  }
+  .products .product .product-hover .icons a:hover{
+    color: var(--5-color);
+    background-color:var(--4-color);
+  }
+  .products .product .product-hover{
+    opacity: 0; /*display :none được thay bằng opacity để có hiệu ứng*/
+    transition: opacity 0.5s;
+  }
+  .products .product:hover .product-hover{
+  opacity: 1; /*display :block được thay bằng opacity để có hiệu ứng*/
+  }
+  .products .product .on-image{
+    position: relative;
+  }
+  .products .product:hover .on-image .overlay{
+    opacity: 1;
+    
+  }
+  .products .product .on-image .overlay{
+    position: absolute;
+    top:0;
+    right: 0;
+    display: grid;
+    grid-template-columns: auto;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  .products .product .overlay img{
+    margin-bottom: 10px;
+    cursor:zoom-in;
+  }
+  .products .product:nth-child(4) .overlay img,
+  .products .product:nth-child(3) .overlay img{
+    width: 82px;
+    height: 102px;
+  }
+
+
+
+
+
+
+  /*lookbookk-tab*/
+  .lookbook-tab .lookbook{
+    display: block;
+    margin: 20px; 
+    background-color: var(--10-color);
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .lookbook-tab .lookbook .left img{
+    width: 150px;
+  }
+  .lookbook-tab .lookbook .right{
+    margin: auto;
+    text-align: center;
+  }
+  .lookbook-tab .lookbook .right .chest h2{
+    font-size: 20px;
+    color: var(--8-color);
+    font-family: Montserrat-Bold;
+  }
+  .lookbook-tab .lookbook .right .chest {
+    margin-right: 0;
+  }
+  .lookbook-tab .lookbook .right .chest h2 span{
+    font-family: Montserrat-Light;
+  }
+  .lookbook-tab .lookbook .right .chest p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .lookbook-tab .lookbook .right .chest a{
+    padding: 10px;
+    display: inline-block;
+    font-size: 16px;
+    text-decoration: none;
+    font-family: Montserrat-Regular;
+    color: var(--7-color);
+    border: 1px solid var(--7-color);
+    transition: 0.5s;
+  }
+  .lookbook-tab .lookbook .right .chest a:hover{
+    color: var(--5-color);
+    background-color: var(--4-color);
+    border: 1px solid var(--4-color);
+  }
+
+
+
+
+  /*informations*/
+  .informations{
+    background-color: var(--10-color);
+  }
+  /*row1*/
+  .informations .row1{
+    display: block;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+  }
+  .informations .row1 .col{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .informations .row1 .col .links{
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .informations .row1 .col h2{
+    font-size: 13px;
+    color: var(--8-color);
+    font-family: Montserrat-Regular;
+    margin-bottom: 10px;
+  }
+  .informations .row1 .col .links a{
+    text-decoration: none;
+    font-family: Montserrat-Light;
+    color: var(--9-color);
+    margin-bottom: 5px;
+    transition: color 0.5s;
+  }
+  .informations .row1 .col .links a:hover{
+    color: var(--4-color);
+  }
+  /*row2*/
+  .informations .row2{
+    display: block;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: var(--5-color);
+    margin-bottom: 10px;
+  }
+  .informations .row2 .award{
+    background-color: var(--1-color);
+    padding: 20px;
+    margin-bottom: 10px;
+  }
+  .informations .row2 .award h2{
+    font-size: 20px;
+    font-family: Montserrat-Bold;
+  }
+  .informations .row2 .award p{
+    font-size: 20px;
+    font-family: Montserrat-Light;
+  }
+  .informations .row2 .contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--4-color);
+    transition: 0.5s;
+    padding: 20px;
+  }
+  .informations .row2 .contact a{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--5-color);
+    transition: 0.5s;
+  }
+  .informations .row2 .contact:hover{
+    background-color:var(--1-color);
+  }
+  .informations .row2 .contact a:hover{
+    color: var(--4-color);
+  }
+
+  
+  /*footer*/
+  footer{
+    display: block;
+    background-color: var(--1-color);
+    color: var(--3-color);
+    font-size: 13px;
+    font-family: Montserrat-Regular;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  footer  .trademark{
+    text-align: center;
+  }
+  footer .author{
+    display: block;
+  }
+
+
+
+/*back-to-top button*/
+  #myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: var(--4-color);
+    color: var(--5-color);
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+  
+  #myBtn:hover {
+    background-color: var(--2-color);
+  }
+  @media only screen and (min-width:600px) {
+    /*header*/
+header .container{
+  display: grid;
+  grid-template-columns: 300px 300px;
+  font-family: Montserrat-Regular;
+  background-color: var(--1-color);
+  justify-content: center;
+}
+.container .left{
+  text-align: left;
+  font-size: 13px;
+  color: var(--2-color);
+  font-family: Montserrat-Regular;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+.container .left label{
+  cursor: pointer;
+}
+.container .left select{
+  border: none;
+  color: var(--2-color);
+  background-color: var(--13-color);
+  font-size: 13px;
+}
+.container .right{
+  text-align: right;
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  text-align: center;
+}
+.container .right a{
+  text-decoration: none;
+  color:var(--3-color);
+  font-size: 13px;
+  transition: 0.5s;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.active{
+background-color: var(--4-color);
+color: var(--5-color);
+}
+.container .right a:hover{
+background-color: var(--4-color);
+color: var(--5-color);
+}
+
+.container .right a.active{
+background-color: var(--4-color);
+color: var(--5-color);
+}
+
+
+
+/*main-tab*/
+.main-tab{
+  background-image: url("../../image/home/AVE-HOME.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 300px;
+}
+.main-tab .logo{
+text-align: left;
+padding-left: 10px;
+padding-top: 10px;
+}
+.main-tab .logo img{
+  width: 237px;
+}
+/*desktop-menu*/
+.main-tab .desktop-menu{
+  display: none;
+}
+/*mobile-menu*/
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: var(--12-color);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 15px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--2-color);
+  display: block;
+  transition: 0.5s;
+  font-family: Montserrat-Regular;
+}
+.sidenav a:nth-child(2){
+  margin-top: 100px;
+}
+.sidenav a:nth-child(1){
+  font-size: 80px;
+}
+.sidenav a:nth-child(1):hover{
+  color: var(--6-color);
+}
+.sidenav a:hover:not(:nth-child(1)) {
+  color: var(--6-color);
+  background-color: var(--4-color);
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.mobile-menu span{
+  font-size: 40px;
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 10px;
+  position: fixed;
+  transition: transform 0.5s;
+}
+.mobile-menu{
+  text-align: left;
+}
+/*kết thúc menu mobile*/
+.main-tab .button{
+  text-align: right;
+  margin-right: 30px;
+  transform: translateY(140px);
+}
+.main-tab .button button{
+  padding: 10px;
+  font-size: 16px;
+  color:var(--7-color);
+  border: 1px solid var(--7-color);
+  background-color: var(--13-color);
+  cursor: pointer;
+  transition: 0.5s;
+}
+.main-tab .button button:hover{
+  background-color: var(--8-color);
+  color: var(--5-color);
+}
+
+
+
+
+
+/*product-tab*/
+.product-tab{
+  margin-top: 20px;
+  text-align: center;
+  font-family: Montserrat-Regular;
+}
+.product-tab .product-menu{
+  margin-bottom: 20px;
+}
+.product-tab .product-menu button{
+  display: inline-block;
+  text-decoration: none;
+  font-size: 12px;
+  color: var(--9-color);
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color:var(--13-color);
+  transition: 0.5s;
+  border: none;
+  cursor: pointer;
+}
+.product-tab .product-menu button.active1,
+.product-tab .product-menu button:hover{
+  color: var(--4-color);
+}
+.products .product{
+  margin: auto;
+  width: 420px;
+  margin-bottom: 40px;
+  transition: box-shadow 0.5s;
+}
+.products .product .on-image>img{
+  width: 420px;
+}
+.products .product:nth-child(4) img,
+.products .product:nth-child(3) img{
+  width: 420px;
+}
+.products .product img{
+  cursor: zoom-in;
+}
+.products .product .product-hover{
+  background-color: var(--5-color);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: block;
+}
+.products .product .product-hover h2{
+  color: var(--9-color);
+  font-size: 13px;
+}
+.products .product .product-hover p{
+  color: var(--11-color);
+  font-size: 15px;
+  max-width: 307px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.products .product .product-hover .icons{
+  margin-bottom: 10px;
+}
+.products .product .product-hover .icons a{
+  font-size: 18px;
+  background-color: var(--9-color);
+  color: var(--5-color);
+  padding: 7px;
+  border-radius: 50%;
+  margin-right: 5px;
+  margin-left: 5px;
+  transition: 0.5s;
+}
+.products .product .product-hover .icons a:hover{
+  color: var(--5-color);
+  background-color:var(--4-color);
+}
+.products .product .product-hover{
+  opacity: 0; /*display :none được thay bằng opacity để có hiệu ứng*/
+  transition: opacity 0.5s;
+}
+.products .product:hover .product-hover{
+opacity: 1; /*display :block được thay bằng opacity để có hiệu ứng*/
+}
+.products .product .on-image{
+  position: relative;
+}
+.products .product:hover .on-image .overlay{
+  opacity: 1;
+  
+}
+.products .product .on-image .overlay{
+  position: absolute;
+  top:0;
+  right: 0;
+  display: grid;
+  grid-template-columns: auto;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.products .product .overlay img{
+  margin-bottom: 10px;
+  cursor:zoom-in;
+}
+.products .product:nth-child(4) .overlay img,
+.products .product:nth-child(3) .overlay img{
+  width: 82px;
+  height: 102px;
+}
+
+
+
+
+
+
+/*lookbookk-tab*/
+.lookbook-tab .lookbook{
+  display: grid;
+  grid-template-columns: 280px 280px;
+  justify-content: center; /*
+  Muốn chiều rộng nội dung nằm giữa khi kéo ra, kéo dô màn hình (khi set grid-templat-columns không phải auto) thì thêm justify-content:center
+  Tổng chiều rộng của lưới phải nhỏ hơn chiều rộng của vùng chứa để thuộc justify-contenttính có hiệu lực.*/
+  width: 560px; /*để cái nền không bị kéo dài ra khi kéo dài độ rộng màn hình*/
+  margin: auto; /*cho khối nội dung nằm giữa khi set width:600;*/
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: var(--10-color);
+}
+.lookbook-tab .lookbook .right{
+  margin: auto;
+  text-align: right;
+  
+}
+.lookbook-tab .lookbook .right .chest h2{
+  font-size: 25px;
+  color: var(--8-color);
+  font-family: Montserrat-Bold;
+}
+.lookbook-tab .lookbook .right .chest {
+  margin-right: 10px;
+}
+.lookbook-tab .lookbook .right .chest h2 span{
+  font-family: Montserrat-Light;
+}
+.lookbook-tab .lookbook .right .chest p{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.lookbook-tab .lookbook .right .chest a{
+  padding: 10px;
+  display: inline-block;
+  font-size: 16px;
+  text-decoration: none;
+  font-family: Montserrat-Regular;
+  color: var(--7-color);
+  border: 1px solid var(--7-color);
+  transition: 0.5s;
+}
+.lookbook-tab .lookbook .right .chest a:hover{
+  color: var(--5-color);
+  background-color: var(--4-color);
+  border: 1px solid var(--4-color);
+}
+
+.lookbook-tab .lookbook .left img{
+  width: 202px;
+}
+
+
+/*informations*/
+.informations{
+  background-color: var(--10-color);
+}
+/*row1*/
+.informations .row1{
+  display: grid;
+  grid-template-columns: 280px 280px;
+  margin-left: 20px;
+  margin-right: 20px;
+  justify-content: center;
+}
+.informations .row1 .col{
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.informations .row1 .col .links{
+  display: grid;
+  grid-template-columns: auto;
+}
+.informations .row1 .col h2{
+  font-size: 13px;
+  color: var(--8-color);
+  font-family: Montserrat-Regular;
+  margin-bottom: 10px;
+}
+.informations .row1 .col .links a{
+  text-decoration: none;
+  font-family: Montserrat-Light;
+  color: var(--9-color);
+  margin-bottom: 5px;
+  transition: color 0.5s;
+}
+.informations .row1 .col .links a:hover{
+  color: var(--4-color);
+}
+/*row2*/
+.informations .row2{
+  display: grid;
+  grid-template-columns: 280px 280px;
+  margin-left: 10px;
+  margin-right: 10px;
+  justify-content: center;
+  color: var(--5-color);
+  margin-bottom: 20px;
+}
+.informations .row2 .award{
+  background-color: var(--1-color);
+  padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 0;
+}
+.informations .row2 .award h2{
+  font-size: 20px;
+  font-family: Montserrat-Bold;
+}
+.informations .row2 .award p{
+  font-size: 20px;
+  font-family: Montserrat-Light;
+}
+.informations .row2 .contact{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--4-color);
+  margin-left: 10px;
+  transition: 0.5s;
+}
+.informations .row2 .contact a{
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+  text-decoration: none;
+  color: var(--5-color);
+  transition: 0.5s;
+}
+.informations .row2 .contact:hover{
+  background-color:var(--1-color);
+}
+.informations .row2 .contact a:hover{
+  color: var(--4-color);
+}
+
+
+/*footer*/
+footer{
+  display: grid;
+  grid-template-columns: 300px 300px;
+  background-color: var(--1-color);
+  color: var(--3-color);
+  font-size: 13px;
+  font-family: Montserrat-Regular;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  justify-content: center;
+}
+footer  .trademark{
+  text-align: left;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+footer .author{
+  display: block;
+  text-align: right;
+  margin-right: 10px;
+}
+
+
+
+
+
+  }
+  @media only screen and (min-width:768px) {
+    /*header*/
+    header .container{
+      display: grid;
+      grid-template-columns: 384px 384px;
+    }
+    .container .right{
+      display: grid;
+      grid-template-columns: 128px 128px 128px;
+    }
+    /*product-tab*/
+    .product-tab .product-menu button{
+      font-size: 15px;
+    }
+    /*informations*/
+    .informations .row1{
+      display: grid;
+      grid-template-columns: 182px 182px 182px 182px;
+    }
+    .informations .row2{
+      display: grid;
+      grid-template-columns: 374px 374px;
+    }
+    /*footer*/
+    footer{
+      display: grid;
+      grid-template-columns: 384px 384px;
+    }
+
+  }
+  @media only screen and (min-width:992px){
+    /*header*/
+    header .container{
+      display: grid;
+      grid-template-columns: 496px 496px;
+    }
+    .container .right{
+      display: grid;
+      grid-template-columns: 166px 166px 166px;
+    }
+    /*main-tab*/
+    .main-tab {
+      background-size: cover;
+      padding-bottom: 200px;
+    }
+    .main-tab .mobile-menu{
+      display: none;
+    }
+    .main-tab  .button button{
+      display: inline-block;
+    }
+    .main-tab .logo{
+      display: none;
+    }
+    .main-tab .desktop-menu{
+      display: grid;
+      grid-template-columns: auto auto;
+      text-align: left;
+      padding-top: 10px;
+      margin-bottom: 200px;
+    }
+    .main-tab .div-replace{
+      display: none;
+      height: 246px; /*chiều cao của div giả này chính là chiều cao của cái thanh menu-desktop+(padding + margin theo phương dọc)*/
+    }
+    @keyframes effect{
+      from{
+        top: -80px;
+      }
+      to{ 
+        top: 0;
+      }
+    }
+    .animation{
+      animation-name: effect;
+      animation-duration: 1s;
+      animation-fill-mode:both;
+    }
+    .main-tab .desktop-menu .logo-desktop{
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+    }
+    .main-tab .desktop-menu .menu ul{
+      display: grid;
+      grid-template-columns: auto auto auto auto auto auto;
+      list-style-type: none;
+    }
+    .main-tab .desktop-menu .menu ul li a{
+      font-size: 13px;
+      text-decoration: none;
+      font-family: Montserrat-Regular;
+      color: var(--14-color);
+      transition: 0.5s;
+    }
+    .main-tab .desktop-menu .menu ul li:hover>a i,
+    .main-tab .desktop-menu .menu ul li:hover>a{
+      color: var(--4-color);
+    }
+    .main-tab .desktop-menu .menu ul li a i{
+      color: var(--14-color);
+      transition: 0.5s;
+    }
+    .main-tab .desktop-menu .menu ul li form input{
+      line-height: 20px;
+      font-size: 13px;
+      padding-left: 5px;
+      font-family: Montserrat-Light;
+    }
+    .main-tab .desktop-menu .menu ul li .search{
+      position: relative;
+    }
+    .main-tab .desktop-menu .menu ul li form i{
+      position: absolute;
+      font-size: 13px;
+      color: #989898;
+      left:140px; /*Tự nhiên chỗ kính lúp này đặt left thì lúc giản màn hình ra , kính lúp bị trôi theo, còn để left thì nó đứng yên*/
+      top:5px;
+    }
+    /*list-menu-hover*/
+    .main-tab .desktop-menu .menu ul li{
+      position: relative;
+    }
+    .main-tab .desktop-menu .menu ul li .list-menu-hover{
+      padding: 20px;
+      background-color: var(--10-color);
+      position: absolute;
+      box-shadow:0 12px 8px 5px rgba(0, 0, 0, 0.2), 0 12px 20px 5px rgba(0, 0, 0, 0.19);
+      display: none;
+      z-index: 2;
+    }
+    .main-tab .desktop-menu .menu ul li:hover .list-menu-hover{
+      display: block;
+    }
+    /*top*/
+    .main-tab .desktop-menu .menu ul li .list-menu-hover .top{
+      display: grid;
+      grid-template-columns: 100px 100px;
+      column-gap: 10px;
+      margin-bottom: 20px;
+    }
+    .main-tab .desktop-menu .menu ul li .list-menu-hover .top .menu h2{
+      margin-bottom: 10px;
+      font-size: 12px;
+      font-family: Montserrat-Regular;
+      color: var(--1-color);
+    }
+    .main-tab .desktop-menu .menu ul li .list-menu-hover .top .menu .a-list-container{
+      display: grid;
+      grid-template-columns: auto;
+    }
+    .main-tab .desktop-menu .menu ul li .list-menu-hover .top .menu .a-list-container a{
+      font-family: Montserrat-Light;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .main-tab .desktop-menu .menu ul li .list-menu-hover .top .menu .a-list-container a:hover{
+      color: var(--4-color);
+    }
+    /*bottom*/
+    .main-tab .desktop-menu .menu ul li .list-menu-hover .bottom{
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      background-color: var(--1-color);
+      padding: 20px;
+    }
+    .main-tab .desktop-menu .menu ul li .list-menu-hover .bottom p{
+      font-size: 20px;
+      font-family: Montserrat-Bold;
+      color: var(--10-color);
+    }
+    .main-tab .desktop-menu .menu ul li .list-menu-hover .bottom span{
+      font-family: Montserrat-Light;
+      font-size: 20px;
+      color: var(--10-color);
+    }
+    /*product-tab*/
+    .product-tab{
+      margin-bottom: 20px;
+    }
+    .product-tab .products{
+      display: grid;
+      grid-template-areas: 
+      'one two three three'
+      'four four three three'
+      'four four five six';
+      column-gap:10px;
+      row-gap: 10px;
+      justify-content: center;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    .product-tab .products .product1{grid-area: one;}
+    .product-tab .products .product2{grid-area: two;}
+    .product-tab .products .product3{grid-area: three;}
+    .product-tab .products .product4{grid-area: four;}
+    .product-tab .products .product5{grid-area: five;}
+    .product-tab .products .product6{grid-area: six;}
+
+    .product-tab .products .product1,
+    .product-tab .products .product2,
+    .product-tab .products .product5,
+    .product-tab .products .product6{
+      width: 230.5px;
+      height: 289px;
+      margin-bottom: 0;
+    }
+    .product-tab .products .product3,
+    .product-tab .products .product4{
+      width: 471px; /*tính thêm cái column-gap 10px dô nữa*/
+      height: 393px;
+      margin-bottom: 0;
+    }
+    .product-tab .products .product6 .on-image>img,
+    .product-tab .products .product5 .on-image>img,
+    .product-tab .products .product2 .on-image>img,
+    .product-tab .products .product1 .on-image>img{
+      width: 230.5px;
+      height: 289px;
+    }
+    .product-tab .products .product3 .on-image>img,
+    .product-tab .products .product4 .on-image>img{
+      width: 471px; /*tính thêm cái column-gap 10px dô nữa*/
+      height: 393px;
+    }
+    .product-tab .products .product3:hover,
+    .product-tab .products .product2:hover,
+    .product-tab .products .product1:hover{
+      z-index: 3;
+    }
+    .product-tab .products .product3,
+    .product-tab .products .product2,
+    .product-tab .products .product1{
+      z-index: 2;
+    }
+    .product-tab .products .product6:hover,
+    .product-tab .products .product5:hover,
+    .product-tab .products .product4:hover{
+      z-index:1;
+    }
+    .products .product .product-hover{
+      transform: translateY(-10px);
+      transition: 0.5s;
+    }
+    .products .product:hover .product-hover{
+      box-shadow:0 12px 8px 5px rgba(0, 0, 0, 0.2), 0 12px 20px 5px rgba(0, 0, 0, 0.19);
+      transform: translateY(-10px);
+    }
+    /*lookbook-tab*/
+    .lookbook-tab{
+      display: grid;
+      grid-template-columns:314px 314px 314px;
+      column-gap: 5px;
+      margin-left: 20px;
+      margin-right: 20px;
+      justify-content: center;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    .lookbook-tab .lookbook{
+      width: auto;
+      display: grid;
+      grid-template-columns: 157px 157px;
+    }
+    .lookbook-tab .lookbook .left img{
+      width: 157px;
+    }
+    /*informations*/
+    .informations .row1{
+      display: grid;
+      grid-template-columns: 190.4px 190.4px 190.4px 190.4px 190.4px;
+    }
+    .row1 .col .links a{
+      font-size: 13px;
+    }
+    .informations .row2{
+      display: grid;
+      grid-template-columns: 471px 471px;
+      column-gap: 10px;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    .informations .row2 .award{
+      margin-right: 0;
+    }
+    .informations .row2 .contact{
+      margin-left: 0;
+    }
+    /*footer*/
+    footer{
+      display: grid;
+      grid-template-columns: 476px 476px;
+      justify-content: center;
+    }
+    footer .trademark{
+      margin-left: 0;
+    }
+    footer .author{
+      margin-right: 0;
+      display: grid;
+      grid-template-columns: 238px 238px;
+    }
+  }
+  @media only screen and (min-width:1200px){
+    /*header*/
+    header .container{
+      display: grid;
+      grid-template-columns: 600px 600px;
+    }
+    header .container .right{
+      display: grid;
+      grid-template-columns: 200px 200px 200px;
+    }
+    /*main-tab*/
+   .main-tab{
+      background-size: cover;
+    }
+    /*product-tab*/
+    .product-tab{
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    .product-tab .products{
+      width: 1160px;
+      margin: auto;
+    }
+    .product-tab .products .product1,
+    .product-tab .products .product2,
+    .product-tab .products .product5,
+    .product-tab .products .product6{
+      width: 282.5px;
+      height: 350px;
+      margin-bottom: 0;
+    }
+    .product-tab .products .product3,
+    .product-tab .products .product4{
+      width: 575px; /*tính thêm cái column-gap 10px dô nữa*/
+      height: 454px;
+      margin-bottom: 0;
+    }
+    .product-tab .products .product6 .on-image>img,
+    .product-tab .products .product5 .on-image>img,
+    .product-tab .products .product2 .on-image>img,
+    .product-tab .products .product1 .on-image>img{
+      width: 282.5px;
+      height: 350px;
+    }
+    .product-tab .products .product3 .on-image>img,
+    .product-tab .products .product4 .on-image>img{
+      width: 575px; /*tính thêm cái column-gap 10px dô nữa*/
+      height: 454px;
+    }
+    /*lookbook-tab*/
+    .lookbook-tab{
+      display: grid;
+      grid-template-columns: 380px 380px 380px;
+      column-gap: 10px;
+    }
+    .lookbook-tab .lookbook{
+      width: 380px;
+      display: grid;
+      grid-template-columns: 190px 190px;
+    }
+    /*informations*/
+    .informations .row1{
+      display: grid;
+      grid-template-columns: 232px 232px 232px 232px 232px;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    .informations .row2{
+      display: grid;
+      grid-template-columns: 580px 580px;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    .informations .row2 .award{
+      padding: 30px;
+    }
+    .informations .row2 .contact{
+      padding: 30px;
+    }
+    /*footer*/
+    footer{
+      display: grid;
+      grid-template-columns: 580px 580px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    footer .author{
+      display: grid;
+      grid-template-columns: 290px 290px;
+    }
+  }
+
